@@ -73,7 +73,7 @@ export function generateQuestionAndAnswer(nums, puzzles){
     do {tempPosTwo = randomInt(nums.length)} while(positionOne == tempPosTwo) 
     const positionTwo = tempPosTwo
     let tempPosThree
-    do {tempPosThree = randomInt(nums.length)} while(positionTwo == tempPosThree) 
+    do {tempPosThree = randomInt(nums.length)} while(positionOne == tempPosThree) 
     const positionThree = tempPosThree
     
 
@@ -82,7 +82,7 @@ export function generateQuestionAndAnswer(nums, puzzles){
     do {tempSecondQuestion = sample(Object.keys(QUESTIONS))} while(tempSecondQuestion == firstQuestion) 
     const secondQuestion = tempSecondQuestion
     let tempThirdQuestion
-    do {tempThirdQuestion = sample(Object.keys(QUESTIONS))} while(tempThirdQuestion == secondQuestion) 
+    do {tempThirdQuestion = sample(Object.keys(QUESTIONS))} while(tempThirdQuestion == firstQuestion) 
     const thirdQuestion = tempThirdQuestion
 
     puzzles = puzzles.map(convertPuzzleDataLang)
